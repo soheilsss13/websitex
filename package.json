@@ -1,0 +1,12 @@
+{
+  "name": "x-capital-static-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:crystal": "node scripts/build-crystal.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "three": "0.186.1"
+  }
+}
