@@ -14,14 +14,11 @@ python3 -m http.server 4173
 
 ## انتشار روی GitHub Pages
 
-یک workflow آماده در `.github/workflows/pages.yml` قرار دارد و با push روی `main` یا شاخه‌ی این پیاده‌سازی اجرا می‌شود.
+صفحه در حال حاضر از ریشه‌ی شاخه‌ی کاری همین نسخه (`arena/4635e2ee-websitex`) منتشر می‌شود؛ بنابراین نیازی به merge نیست. تنظیم مخزن روی **Deploy from a branch → شاخه‌ی `arena/4635e2ee-websitex` → فولدر `/ (root)`** قرار گرفته است و pushهای بعدی به همین شاخه، Pages را به‌روزرسانی می‌کنند.
 
-1. تغییرات را به مخزن GitHub push کنید.
-2. در مخزن، وارد **Settings → Pages** شوید و **Source** را روی **GitHub Actions** قرار دهید.
-3. در زبانه‌ی **Actions**، اجرای workflow با نام **Deploy static site to GitHub Pages** را بررسی کنید. پس از پایان موفق، لینک سایت در همان workflow و بخش Pages نمایش داده می‌شود.
-4. برای دامنه‌ی اختصاصی، آن را در **Settings → Pages → Custom domain** وارد کنید و DNS را طبق راهنمای GitHub تنظیم کنید.
+آدرس سایت: <https://soheilsss13.github.io/websitex/>
 
-سایت از مسیرهای نسبی استفاده می‌کند و برای آدرس‌هایی مانند `username.github.io/repository/` نیز مناسب است.
+برای دامنه‌ی اختصاصی، آن را در **Settings → Pages → Custom domain** وارد کنید و DNS را طبق راهنمای GitHub تنظیم کنید. مسیرهای سایت نسبی‌اند و با آدرس پروژه‌ای GitHub Pages سازگارند.
 
 ## بخش‌های پیاده‌سازی‌شده
 
@@ -53,4 +50,3 @@ python3 -m http.server 4173
 - `assets/logo.svg` و `assets/favicon.svg` — هویت بصری
 - `assets/images/` — تصویرهای تولیدشده‌ی هیرو، کریستال بازشده، شبکه، طلوع، ۸ حوزه، کارت پورتفولیو، فرم درخواست، OG، ۴۰۴ و بافت گره‌چینی (تصویرهای مفهومی، نه عکس پروژه‌ی واقعی)
 - `assets/fonts/` — فونت‌های محلی و مجوزهای آن‌ها
-- `.github/workflows/pages.yml` — انتشار خودکار روی GitHub Pages
