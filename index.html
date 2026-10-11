@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#040e1c">
+  <meta name="description" content="x؛ همراه ایده‌های جسورانه از نخستین جرقه تا ساختن یک صنعت. سرمایه، شبکه و مسیر رشد برای بنیان‌گذاران آینده.">
+  <meta property="og:title" content="x — از شب تا سپیده">
+  <meta property="og:description" content="هر صنعتی، روزی یک ایده بود. با x، ایده‌ی بعدی را به مسیر رشد تبدیل کنید.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-crystal.jpg">
+  <title>x — از شب تا سپیده | سرمایه‌گذاری جسورانه</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/vazirmatn-arabic-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/hero-crystal.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-fill"></span></div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader-core"></span>
+    <span class="loader-line"></span>
+    <span class="loader-wordmark">x <i>capital</i></span>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="#home" aria-label="x، بازگشت به خانه">
+        <img src="assets/logo.svg" alt="" width="46" height="46">
+        <span class="brand-copy"><strong>x</strong><small>سرمایه‌گذاری جسورانه</small></span>
+      </a>
+      <nav class="main-nav" aria-label="ناوبری اصلی">
+        <a href="#home">خانه</a>
+        <a href="#approach">رویکرد ما</a>
+        <a href="#portfolio">پورتفولیو</a>
+        <a href="#tools">ابزارها</a>
+        <a href="#about">درباره‌ی ما</a>
+        <a href="#insights">مقالات</a>
+      </nav>
+      <div class="header-actions">
+        <div class="acceptance"><span class="status-dot"></span><span>پذیرش درخواست‌ها: <b>باز</b></span></div>
+        <button class="button button-primary header-apply" type="button" data-open-application>ارسال درخواست <span class="arrow">↗</span></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="باز کردن منو" aria-expanded="false" aria-controls="full-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="full-menu" id="full-menu" aria-hidden="true" inert>
+    <div class="menu-top shell">
+      <a class="brand brand-menu" href="#home" aria-label="x، خانه"><img src="assets/logo.svg" alt="" width="46" height="46"><span class="brand-copy"><strong>x</strong><small>سرمایه‌گذاری جسورانه</small></span></a>
+      <button class="menu-close" id="menu-close" type="button" aria-label="بستن منو"><span></span><span></span></button>
+    </div>
+    <div class="menu-content shell">
+      <div class="menu-links" aria-label="صفحه‌ها">
+        <a href="#home"><span>خانه</span><small>۰۱</small></a>
+        <a href="#approach"><span>رویکرد ما</span><small>۰۲</small></a>
+        <a href="#portfolio"><span>پورتفولیو</span><small>۰۳</small></a>
+        <a href="#tools"><span>ابزارها</span><small>۰۴</small></a>
+        <a href="#about"><span>درباره‌ی ما</span><small>۰۵</small></a>
+        <a href="#insights"><span>مقالات</span><small>۰۶</small></a>
+      </div>
+      <div class="menu-aside">
+        <div class="menu-crystal" aria-hidden="true"><span></span></div>
+        <p>هر مسیر بزرگ،<br><em>از یک ایده شروع می‌شود.</em></p>
+        <button class="button button-primary" type="button" data-open-application>ایده‌ات را بفرست <span class="arrow">↗</span></button>
+        <div class="menu-contact"><span>تماس با ما</span><a href="mailto:hello@x.example">hello@x.example</a><span>تهران، ایران</span></div>
+      </div>
+    </div>
+    <div class="menu-bottom shell"><span>از شب تا سپیده</span><span>© x سرمایه‌گذاری</span><span>نسخه‌ی نمایشی</span></div>
+  </nav>
+
+  <aside class="dawn-clock" aria-label="زمان سپیده، متناسب با مسیر صفحه">
+    <div class="clock-track"><span id="clock-dot"></span></div>
+    <div class="clock-readout"><span class="eyebrow">DAWN / ۰۴:۱۰</span><strong id="clock-time">۰۴:۱۰</strong><span id="clock-chapter">جرقه</span></div>
+  </aside>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><i id="cursor-label"></i></span></div>
+
+  <main>
+    <section class="hero-section scene-dark" id="home" data-scene="جرقه">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-teal" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-gold" aria-hidden="true"></div>
+      <div class="hero-layout shell">
+        <div class="hero-copy">
+          <div class="eyebrow-row"><span class="eyebrow-line"></span><span class="eyebrow">سرمایه‌گذاری خطرپذیر</span><span class="eyebrow-en">VENTURE CAPITAL · IRAN</span></div>
+          <h1 class="hero-title"><span class="title-line">هر صنعتی،</span><span class="title-line">روزی <em>یک ایده</em> بود.</span></h1>
+          <p class="hero-lede">در ایده‌های جاه‌طلبانه سرمایه‌گذاری می‌کنیم؛ با سرمایه، شبکه، مشتری و مسیری که به ساختن آینده می‌رسد.</p>
+          <div class="hero-actions">
+            <button class="button button-primary magnetic" type="button" data-open-application>ارسال درخواست سرمایه‌گذاری <span class="arrow">↗</span></button>
+            <a class="button button-outline" href="#approach">ببینید چطور کار می‌کنیم <span class="down-arrow">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-star">✳</span><span>سرمایه تنها نقطه‌ی شروع است.</span></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="کریستال شیشه‌ای با هسته‌ی طلایی؛ نماد ایده‌ای در حال شکل‌گیری">
+          <div class="art-orbit orbit-one" aria-hidden="true"></div>
+          <div class="art-orbit orbit-two" aria-hidden="true"></div>
+          <div class="art-crosshair" aria-hidden="true"><i></i><i></i></div>
+          <canvas id="crystal-canvas" aria-hidden="true"></canvas>
+          <div class="art-label art-label-top"><span class="tiny-dot"></span><span>یک ایده‌ی خام</span><small>01 / SEED</small></div>
+          <div class="art-label art-label-bottom"><span class="label-line"></span><span>آینده‌ای که هنوز ساخته نشده</span></div>
+          <div class="art-coordinate">35°41′ N<br>51°25′ E</div>
+        </div>
+      </div>
+      <div class="hero-footer shell">
+        <div class="hero-stats" aria-label="مرور ظرفیت‌ها">
+          <div class="hero-stat"><strong>۰۸</strong><span>دنیای صنعتی</span></div>
+          <div class="hero-stat"><strong>۰۵</strong><span>گام تا همراهی</span></div>
+          <div class="hero-stat"><strong>∞</strong><span>فرصت برای ساختن</span></div>
+        </div>
+        <a class="scroll-cue" href="#manifesto"><span>برای کشف مسیر اسکرول کنید</span><i></i></a>
+        <span class="hero-index">01 <i>/</i> 13</span>
+      </div>
+    </section>
+
+    <section class="manifesto-section scene-dark" id="manifesto" data-scene="باور">
+      <div class="manifesto-backdrop" aria-hidden="true"><span>01</span><span>IDEA → INDUSTRY</span></div>
+      <div class="manifesto-art-backdrop" aria-hidden="true"></div>
+      <div class="manifesto-inner shell">
+        <div class="section-kicker light-kicker"><span class="kicker-number">01</span><span>مانیفست ما</span><i></i><span class="eyebrow-en">OUR BELIEF</span></div>
+        <p class="manifesto-statement" id="manifesto-statement" aria-label="ما به ایده‌هایی سرمایه می‌دهیم که هنوز کسی باورشان نکرده؛ و می‌مانیم تا صنعت شوند.">
+          <span class="manifesto-word">ما</span>
+          <span class="manifesto-word">به</span>
+          <span class="manifesto-word gold-word">ایده‌هایی</span>
+          <span class="manifesto-word">سرمایه</span>
+          <span class="manifesto-word">می‌دهیم</span>
+          <span class="manifesto-word">که</span>
+          <span class="manifesto-word">هنوز</span>
+          <span class="manifesto-word">کسی</span>
+          <span class="manifesto-word gold-word">باورشان</span>
+          <span class="manifesto-word">نکرده؛</span>
+          <span class="manifesto-word">و</span>
+          <span class="manifesto-word">می‌مانیم</span>
+          <span class="manifesto-word">تا</span>
+          <span class="manifesto-word gold-word">صنعت</span>
+          <span class="manifesto-word">شوند.</span>
+        </p>
+        <div class="manifesto-foot"><span>ایده‌ی خوب، با همراهی درست به آینده می‌رسد.</span><a href="#sectors" class="text-link">با چه ایده‌هایی همراه می‌شویم؟ <b>↙</b></a></div>
+      </div>
+    </section>
+
+    <section class="sectors-section scene-dark" id="sectors" data-scene="اکتشاف">
+      <div class="section-heading shell">
+        <div class="section-kicker light-kicker"><span class="kicker-number">02</span><span>حوزه‌های سرمایه‌گذاری</span><i></i><span class="eyebrow-en">EIGHT INDUSTRIES</span></div>
+        <div class="heading-row"><h2>هشت جهان.<br><em>یک افق مشترک.</em></h2><p>دنبال نسخه‌ی تکراری آینده نیستیم. هر ایده را در جایی می‌سنجیم که جهان را یک قدم جلوتر می‌برد.</p></div>
+      </div>
+      <div class="sector-explorer shell" id="sector-explorer">
+        <div class="sector-list" role="tablist" aria-label="انتخاب حوزه‌ی صنعتی">
+          <button class="sector-item is-active" type="button" role="tab" aria-selected="true" data-sector="0"><span class="sector-num">۰۱</span><span>هوش مصنوعی</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="1"><span class="sector-num">۰۲</span><span>فین‌تک</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="2"><span class="sector-num">۰۳</span><span>سلامت و درمان</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="3"><span class="sector-num">۰۴</span><span>انرژی و محیط‌زیست</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="4"><span class="sector-num">۰۵</span><span>کشاورزی و غذا</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="5"><span class="sector-num">۰۶</span><span>صنعت و تولید</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="6"><span class="sector-num">۰۷</span><span>آموزش و منابع انسانی</span><i>↙</i></button>
+          <button class="sector-item" type="button" role="tab" aria-selected="false" data-sector="7"><span class="sector-num">۰۸</span><span>تجارت و لجستیک</span><i>↙</i></button>
+        </div>
+        <div class="sector-display" role="tabpanel" aria-live="polite">
+          <div class="sector-visual" id="sector-visual" data-sector="0">
+            <div class="sector-visual-grid" aria-hidden="true"></div>
+            <div class="sector-ring ring-a" aria-hidden="true"></div><div class="sector-ring ring-b" aria-hidden="true"></div>
+            <div class="sector-glyph" id="sector-glyph" aria-hidden="true">✳</div>
+            <div class="sector-orb-core" aria-hidden="true"></div>
+            <span class="sector-visual-index" id="sector-visual-index">01</span>
+            <span class="sector-tag" id="sector-tag">SYSTEMS THAT LEARN</span>
+            <span class="sector-side-note">FIG. 01 — THE NEXT FRONTIER</span>
+          </div>
+          <div class="sector-description">
+            <div><span class="eyebrow">یک افق برای</span><h3 id="sector-title">هوش مصنوعی</h3></div>
+            <p id="sector-copy">ابزارها و محصولاتی که از داده، تصمیم‌های بهتر و تجربه‌های انسانی‌تر می‌سازند.</p>
+            <span class="sector-caption" id="sector-caption">ما به مسئله‌های واقعی نگاه می‌کنیم، نه فقط فناوری تازه.</span>
+          </div>
+        </div>
+      </div>
+      <div class="sectors-bottom shell"><span>از ایده‌ی جسورانه تا کاربرد روزمره</span><a class="text-link" href="#approach">رویکرد سرمایه‌گذاری <b>↙</b></a></div>
+    </section>
+
+    <section class="value-section scene-deep" id="value" data-scene="همراهی">
+      <div class="value-lattice-backdrop" aria-hidden="true"></div>
+      <div class="section-heading shell">
+        <div class="section-kicker light-kicker"><span class="kicker-number">03</span><span>ارزش افزوده‌ی ما</span><i></i><span class="eyebrow-en">MORE THAN CAPITAL</span></div>
+        <div class="heading-row"><h2>پول فقط<br><em>شروع کار است.</em></h2><p>سرمایه وقتی ارزشمند است که راه‌های تازه باز کند. ما کنار تیم می‌مانیم تا منابع، تصمیم‌ها و فرصت‌ها به هم وصل شوند.</p></div>
+      </div>
+      <div class="value-grid shell">
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۱</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M2 20h20M8 11h1m6 0h1M8 15h1m6 0h1M10 20v-3h4v3"/></svg></span><h3>دسترسی به صنعت</h3><p>شناخت بازار و وصل‌شدن به بازیگرانی که مسئله را از نزدیک می‌شناسند.</p><span class="value-chip">FIELD ACCESS</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۲</span><span class="value-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6m1-5c2.8 0 5 2.2 5 5"/></svg></span><h3>شبکه‌ی همراهان</h3><p>معرفی هدفمند به متخصص‌ها، بنیان‌گذاران و سرمایه‌گذاران مکمل.</p><span class="value-chip">PEOPLE & NETWORK</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۳</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6M15 7h4v4"/></svg></span><h3>دسترسی به مشتری</h3><p>کمک به اعتبارسنجی بازار و ساختن اولین گفت‌وگوهای تجاری.</p><span class="value-chip">CUSTOMER PATH</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۴</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M4.9 4.9 7 7m10 10 2.1 2.1M3 12h3m12 0h3M4.9 19.1 7 17m10-10 2.1-2.1M9 15l6-6M8 8l8 8"/></svg></span><h3>منتورینگ عملی</h3><p>هم‌فکری درباره‌ی اولویت‌ها، محصول، جذب نیرو و تصمیم‌های دشوار.</p><span class="value-chip">MENTORSHIP</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۵</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M5 20h14M7 20V8l5-4 5 4v12M9 11h1m4 0h1m-5 4h1m4 0h1"/></svg></span><h3>زیرساخت و تخصص</h3><p>دسترسی به تجربه و ابزارهایی که ساختن را سریع‌تر و کم‌هزینه‌تر می‌کند.</p><span class="value-chip">BUILDING BLOCKS</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۶</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18m0-18 4 4m-4-4L8 7m4 14 4-4m-4 4-4-4"/><circle cx="12" cy="12" r="8"/></svg></span><h3>گشودن بازار</h3><p>فکرکردن به مسیر ورود، توسعه‌ی کانال فروش و گام بعدی در بازار.</p><span class="value-chip">GO TO MARKET</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۷</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 3 3.5 8v8L12 21l8.5-5V8L12 3Z"/><path d="m7 10 5-3 5 3-5 3-5-3Zm0 4 5 3 5-3M12 13v4"/></svg></span><h3>آمادگی برای دور بعد</h3><p>ساختن شاخص‌ها و روایت روشنی که مرحله‌ی بعدی رشد را ممکن کند.</p><span class="value-chip">NEXT ROUND</span></article>
+        <article class="value-card spotlight-card"><span class="value-card-number">۰۸</span><span class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>اعتبار و اعتماد</h3><p>همراهی بلندمدت و شفاف؛ برای ساختن رابطه‌ای که فراتر از یک قرارداد است.</p><span class="value-chip">TRUST BY DESIGN</span></article>
+      </div>
+      <div class="value-end shell"><span class="value-end-mark">✳</span><p>سرمایه‌ی ما، <em>در کنار شما</em> معنا پیدا می‌کند.</p></div>
+    </section>
+
+    <section class="approach-section scene-deep" id="approach" data-scene="مسیر">
+      <div class="section-heading shell">
+        <div class="section-kicker light-kicker"><span class="kicker-number">04</span><span>مسیر همراهی</span><i></i><span class="eyebrow-en">A CLEARER PATH</span></div>
+        <div class="heading-row"><h2>از اولین پیام<br><em>تا رشد مشترک.</em></h2><p>قدم‌ها روشن‌اند، گفت‌وگو شفاف است و هر مرحله برای این طراحی شده که بدانید بعد از آن چه می‌شود.</p></div>
+      </div>
+      <div class="journey-shell shell">
+        <div class="journey-track" id="journey-track">
+          <div class="journey-line" aria-hidden="true"><span id="journey-line-fill"></span><i id="journey-node"></i></div>
+          <article class="journey-card is-current" data-journey="۰۱"><span class="journey-top"><b>۰۱</b><small>FIRST CONTACT</small></span><div class="journey-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 3V5Z"/><path d="M8 9h8m-8 4h5"/></svg></div><h3>ثبت درخواست</h3><p>در چند دقیقه، مسئله و تیم‌تان را معرفی کنید. لازم نیست پاسخ همه‌چیز را از قبل بدانید.</p><div class="journey-detail"><span>از شما می‌خواهیم</span><b>فرم کوتاه و اطلاعات اولیه</b></div><div class="journey-detail"><span>از ما دریافت می‌کنید</span><b>تأیید دریافت و قدم بعد</b></div></article>
+          <article class="journey-card" data-journey="۰۲"><span class="journey-top"><b>۰۲</b><small>INITIAL REVIEW</small></span><div class="journey-icon"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M8 10h5m-5 3h3"/></svg></div><h3>ارزیابی اولیه</h3><p>تناسب ایده با حوزه‌ها، مرحله‌ی رشد و مسئله‌ای که برای حل آن ساخته‌اید بررسی می‌شود.</p><div class="journey-detail"><span>از شما می‌خواهیم</span><b>اطلاعات روشن و قابل‌بررسی</b></div><div class="journey-detail"><span>از ما دریافت می‌کنید</span><b>پاسخ اولیه؛ زمان نهایی TBD</b></div></article>
+          <article class="journey-card" data-journey="۰۳"><span class="journey-top"><b>۰۳</b><small>DEEP DIVE</small></span><div class="journey-icon"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l4-5 3 2 5-7M15 6h3v3"/><circle cx="6" cy="7" r="2"/></svg></div><h3>گفت‌وگوی عمیق</h3><p>با هم سراغ بازار، محصول، تیم، مدل کسب‌وکار و فرض‌هایی می‌رویم که مسیر را می‌سازند.</p><div class="journey-detail"><span>از شما می‌خواهیم</span><b>داده، زمینه و پرسش‌های‌تان</b></div><div class="journey-detail"><span>از ما دریافت می‌کنید</span><b>گفت‌وگوی مستقیم و بازخورد</b></div></article>
+          <article class="journey-card" data-journey="۰۴"><span class="journey-top"><b>۰۴</b><small>PARTNERSHIP</small></span><div class="journey-icon"><svg viewBox="0 0 24 24"><path d="M7 12.5 10 15l7-7M4 5h16v14H4z"/><path d="M8 3v4m8-4v4"/></svg></div><h3>توافق و سرمایه‌گذاری</h3><p>اگر هر دو طرف به تناسب برسیم، درباره‌ی ساختار همکاری و انتظارات شفاف توافق می‌کنیم.</p><div class="journey-detail"><span>از شما می‌خواهیم</span><b>تصمیم‌گیری آگاهانه</b></div><div class="journey-detail"><span>از ما دریافت می‌کنید</span><b>شرایط روشن و مکتوب</b></div></article>
+          <article class="journey-card" data-journey="۰۵"><span class="journey-top"><b>۰۵</b><small>BUILD TOGETHER</small></span><div class="journey-icon"><svg viewBox="0 0 24 24"><path d="M3 18 9 12l4 3 8-9M16 6h5v5"/><path d="M4 21h16"/></svg></div><h3>رشد مشترک</h3><p>پس از سرمایه‌گذاری، همراهی ادامه دارد: از تصمیم‌های روزمره تا آماده‌شدن برای فرصت بعد.</p><div class="journey-detail"><span>از شما می‌خواهیم</span><b>شفافیت و گفت‌وگوی مستمر</b></div><div class="journey-detail"><span>از ما دریافت می‌کنید</span><b>سرمایه، شبکه و همراهی</b></div></article>
+        </div>
+        <div class="journey-controls"><span>مسیر در پنج گام</span><div><button type="button" id="journey-prev" aria-label="مرحله‌ی قبلی">→</button><button type="button" id="journey-next" aria-label="مرحله‌ی بعد">←</button></div><span class="journey-count"><b id="journey-current">۰۱</b> / ۰۵</span></div>
+      </div>
+    </section>
+
+    <section class="dawn-section" id="impact" data-scene="سپیده">
+      <div class="dawn-art-backdrop" aria-hidden="true"><img src="assets/images/dawn-transition.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="dawn-sun" aria-hidden="true"><span></span><i></i><b></b></div>
+      <div class="dawn-grid" aria-hidden="true"></div>
+      <div class="shell dawn-content">
+        <div class="section-kicker"><span class="kicker-number">05</span><span>معیارهای ما، در یک نگاه</span><i></i><span class="eyebrow-en">FROM SEED TO SCALE</span></div>
+        <div class="dawn-intro"><h2>رشد، یک عدد نیست.<br><em>یک مسیر است.</em></h2><p>به‌جای وعده‌های بزرگ، روی چیزهایی تمرکز می‌کنیم که می‌شود با هم ساخت و سنجید.</p></div>
+        <div class="metric-grid">
+          <article class="metric-card"><strong data-count="8">۰۸</strong><span class="metric-label">حوزه‌ی صنعتی برای کشف فرصت</span><i>INDUSTRIES</i></article>
+          <article class="metric-card"><strong data-count="5">۰۵</strong><span class="metric-label">گام شفاف تا همراهی</span><i>STEPS</i></article>
+          <article class="metric-card"><strong data-count="8">۰۸</strong><span class="metric-label">راه برای کمک فراتر از سرمایه</span><i>VALUE LEVERS</i></article>
+          <article class="metric-card metric-note"><span class="metric-sun">✳</span><span class="metric-label">اعداد واقعی، پس از دریافت اطلاعات رسمی شرکت در همین بخش جایگزین می‌شوند.</span><i>NO PLACEHOLDERS AS FACTS</i></article>
+        </div>
+        <div class="dawn-bottom"><span>ایده‌ها با یک جرقه آغاز می‌شوند؛ آینده با همراهی ساخته می‌شود.</span><span class="dawn-coordinate">06:40 — MORNING IS A DECISION</span></div>
+      </div>
+    </section>
+
+    <section class="portfolio-section light-section" id="portfolio" data-scene="ساختن">
+      <div class="section-heading shell">
+        <div class="section-kicker"><span class="kicker-number">06</span><span>پورتفولیو</span><i></i><span class="eyebrow-en">BUILT TO MATTER</span></div>
+        <div class="heading-row"><h2>ایده‌هایی که<br><em>می‌توانند صنعت شوند.</em></h2><div class="portfolio-intro"><p>اینجا جای روایت تیم‌هایی است که با آن‌ها هم‌مسیر می‌شویم. نمونه‌های زیر، فقط برای نمایش طراحی‌اند.</p><a class="text-link dark-link" href="#application-note">آماده‌اید روایت بعدی را بسازید؟ <b>↙</b></a></div></div>
+      </div>
+      <div class="portfolio-filters shell" role="group" aria-label="فیلتر حوزه‌های نمونه">
+        <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">همه‌ی حوزه‌ها <span>۰۳</span></button>
+        <button type="button" class="filter-chip" data-filter="ai" aria-pressed="false">هوش مصنوعی</button>
+        <button type="button" class="filter-chip" data-filter="health" aria-pressed="false">سلامت</button>
+        <button type="button" class="filter-chip" data-filter="energy" aria-pressed="false">انرژی</button>
+        <span class="filter-caption">کارت‌های نمونه؛ اطلاعات واقعی بعداً جایگزین می‌شود.</span>
+      </div>
+      <div class="portfolio-grid shell" id="portfolio-grid">
+        <article class="portfolio-card spotlight-card" data-category="ai">
+          <div class="portfolio-art art-ai"><div class="art-tag">CONCEPT / 01</div><div class="ai-orbit"><i></i><i></i><i></i><span>AI</span></div><div class="portfolio-art-caption">INTELLIGENCE, IN MOTION</div></div>
+          <div class="portfolio-info"><div><span class="portfolio-type">هوش مصنوعی · نمونه‌ی نمایشی</span><h3>داده‌نما</h3></div><span class="portfolio-arrow">↙</span><p>از داده‌های پراکنده، بینشی که به تصمیم تبدیل می‌شود.</p><div class="portfolio-meta"><span>PRODUCT SYSTEMS</span><span>CONCEPT CASE</span></div></div>
+        </article>
+        <article class="portfolio-card spotlight-card" data-category="health">
+          <div class="portfolio-art art-health"><div class="art-tag">CONCEPT / 02</div><div class="health-shape"><span></span><i>+</i></div><div class="portfolio-art-caption">CARE, REIMAGINED</div></div>
+          <div class="portfolio-info"><div><span class="portfolio-type">سلامت و درمان · نمونه‌ی نمایشی</span><h3>همراه‌تن</h3></div><span class="portfolio-arrow">↙</span><p>تجربه‌ای یکپارچه‌تر برای مراقبت پیش‌نگر و دسترس‌پذیر.</p><div class="portfolio-meta"><span>HEALTH EXPERIENCE</span><span>CONCEPT CASE</span></div></div>
+        </article>
+        <article class="portfolio-card spotlight-card" data-category="energy">
+          <div class="portfolio-art art-energy"><div class="art-tag">CONCEPT / 03</div><div class="energy-grid"><span></span><span></span><span></span><b></b></div><div class="portfolio-art-caption">ENERGY, IN BALANCE</div></div>
+          <div class="portfolio-info"><div><span class="portfolio-type">انرژی پاک · نمونه‌ی نمایشی</span><h3>روشنا</h3></div><span class="portfolio-arrow">↙</span><p>راهکارهایی برای مصرف هوشمندتر و آینده‌ای کم‌اتلاف‌تر.</p><div class="portfolio-meta"><span>CLIMATE & ENERGY</span><span>CONCEPT CASE</span></div></div>
+        </article>
+      </div>
+      <div class="portfolio-foot shell"><span class="foot-symbol">✳</span><p>نام‌ها و روایت‌ها فعلاً ساختگی‌اند تا جایگاه پورتفولیوی واقعی را نشان دهند.</p><button class="button button-dark-outline" type="button" data-open-application>به جمع مسیرهای آینده بپیوندید <span class="arrow">↗</span></button></div>
+    </section>
+
+    <section class="criteria-section light-section" id="criteria" data-scene="تناسب">
+      <div class="section-heading shell">
+        <div class="section-kicker"><span class="kicker-number">07</span><span>تناسب دوطرفه</span><i></i><span class="eyebrow-en">BEFORE WE BEGIN</span></div>
+        <div class="heading-row"><h2>قبل از درخواست،<br><em>ما را بشناسید.</em></h2><p>همکاری خوب از شفافیت شروع می‌شود. این چارچوب نمایشی است و پیش از انتشار باید با شرایط رسمی شرکت تکمیل شود.</p></div>
+      </div>
+      <div class="criteria-layout shell">
+        <div class="criteria-stack">
+          <article class="criteria-card is-open"><button type="button" class="criteria-trigger" aria-expanded="true"><span class="criteria-number">۰۱</span><span><small>WHERE WE LOOK</small><strong>حوزه‌های مورد توجه</strong></span><i>+</i></button><div class="criteria-body"><p>فناوری و مدل‌های کسب‌وکار نوآورانه در هشت حوزه‌ی هوش مصنوعی، فین‌تک، سلامت، انرژی، کشاورزی، صنعت، آموزش و لجستیک.</p><div class="criteria-tags"><span>مسئله‌ی واقعی</span><span>بازار قابل‌تعریف</span><span>راه‌حل مقیاس‌پذیر</span></div></div></article>
+          <article class="criteria-card"><button type="button" class="criteria-trigger" aria-expanded="false"><span class="criteria-number">۰۲</span><span><small>STAGE & TICKET</small><strong>مرحله و بازه‌ی سرمایه</strong></span><i>+</i></button><div class="criteria-body"><p>مرحله‌های مورد قبول، نوع سرمایه‌گذاری و بازه‌ی مبلغ هنوز از سوی شرکت دریافت نشده‌اند. این موارد پیش از انتشار نهایی باید دقیق و شفاف درج شوند.</p><div class="criteria-tags"><span>مرحله: نیازمند تکمیل</span><span>مبلغ: نیازمند تکمیل</span></div></div></article>
+          <article class="criteria-card"><button type="button" class="criteria-trigger" aria-expanded="false"><span class="criteria-number">۰۳</span><span><small>THE TEAM</small><strong>تیم و جغرافیا</strong></span><i>+</i></button><div class="criteria-body"><p>ترکیب تیم، حضور بنیان‌گذاران تمام‌وقت و محدوده‌ی جغرافیایی در ارزیابی بررسی می‌شود؛ معیارهای قطعی در نسخه‌ی نهایی اضافه خواهند شد.</p><div class="criteria-tags"><span>تکمیل با اطلاعات شرکت</span><span>گفت‌وگوی شفاف</span></div></div></article>
+          <article class="criteria-card"><button type="button" class="criteria-trigger" aria-expanded="false"><span class="criteria-number">۰۴</span><span><small>CURRENT FOCUS</small><strong>اولویت‌های فعلی</strong></span><i>+</i></button><div class="criteria-body"><p>اولویت سرمایه‌گذاری می‌تواند با گذر زمان تغییر کند. برای اطلاع از حوزه‌های فعال، این بخش باید به وضعیت واقعی پذیرش درخواست‌ها متصل شود.</p><div class="criteria-tags"><span>به‌روزرسانی فصلی</span><span>وضعیت فعلی: باز</span></div></div></article>
+          <article class="criteria-card criteria-red"><button type="button" class="criteria-trigger" aria-expanded="false"><span class="criteria-number">۰۵</span><span><small>RED FLAGS</small><strong>مواردی که متوقف‌مان می‌کند</strong></span><i>+</i></button><div class="criteria-body"><p>اطلاعات گمراه‌کننده، نقض حقوق دیگران، نبود شفافیت مالی یا ادعاهای غیرقابل‌راستی‌آزمایی، نیازمند بررسی جدی‌اند.</p><div class="criteria-tags"><span>صداقت</span><span>مالکیت فکری روشن</span><span>انطباق قانونی</span></div></div></article>
+        </div>
+        <aside class="criteria-aside">
+          <div class="criteria-aside-mark"><span>✳</span><i></i></div>
+          <span class="eyebrow">FIT IS A TWO-WAY STREET</span>
+          <h3>ما هم باید<br><em>انتخاب درستی</em><br>برای شما باشیم.</h3>
+          <p>قرار نیست همه‌ی ایده‌ها به یک مسیر برسند. مهم این است که زود، روشن و محترمانه بفهمیم آیا می‌توانیم ارزش واقعی اضافه کنیم یا نه.</p>
+          <button class="button button-primary" type="button" data-open-application>معیارها را دیدم، ادامه <span class="arrow">↗</span></button>
+          <small>فرم نمایشی است و به سامانه‌ی ارسال متصل نیست.</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="tools-section light-section" id="tools" data-scene="محاسبه">
+      <div class="section-heading shell">
+        <div class="section-kicker"><span class="kicker-number">08</span><span>ابزارهای بنیان‌گذار</span><i></i><span class="eyebrow-en">THINK IN NUMBERS</span></div>
+        <div class="heading-row"><h2>تصمیم بهتر،<br><em>با عددهای روشن.</em></h2><p>ابزارهای کوچک برای پرسش‌های بزرگ. فعلاً ماشین‌حساب Runway آماده‌ی استفاده است؛ ابزارهای دیگر در نقشه‌ی راه محصول‌اند.</p></div>
+      </div>
+      <div class="tools-grid shell">
+        <article class="runway-card spotlight-card">
+          <div class="runway-heading"><div><span class="tool-label"><i></i> LIVE CALCULATOR</span><h3>Runway Calculator</h3><p>اگر با همین سرعت پیش بروید، نقدینگی چند ماه دوام می‌آورد؟</p></div><div class="tool-stamp">01<span>/08</span></div></div>
+          <div class="runway-main">
+            <div class="runway-controls">
+              <label class="range-control" for="cash-range"><span>موجودی نقدی <b id="cash-output">۳٬۵۰۰</b><small>میلیون تومان</small></span><input id="cash-range" type="range" min="300" max="12000" step="100" value="3500"><span class="range-values"><i>۳۰۰</i><i>۱۲٬۰۰۰</i></span></label>
+              <label class="range-control" for="burn-range"><span>هزینه‌ی ماهانه <b id="burn-output">۳۸۰</b><small>میلیون تومان</small></span><input id="burn-range" type="range" min="50" max="2500" step="10" value="380"><span class="range-values"><i>۵۰</i><i>۲٬۵۰۰</i></span></label>
+              <div class="runway-result"><div><span>زمان تقریبی باقی‌مانده</span><strong id="runway-result">۹٫۲ <i>ماه</i></strong></div><span class="result-icon">↗</span></div>
+            </div>
+            <div class="runway-chart-wrap"><div class="chart-top"><span>پیش‌بینی مانده‌ی نقدی</span><small>میلیون تومان</small></div><svg class="runway-chart" viewBox="0 0 420 190" role="img" aria-label="نمودار تقریبی کاهش مانده‌ی نقدی بر اساس ورودی‌های ماشین‌حساب"><defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1fa89a" stop-opacity=".28"/><stop offset="1" stop-color="#1fa89a" stop-opacity="0"/></linearGradient></defs><g class="chart-grid"><path d="M38 20H410M38 62H410M38 104H410M38 146H410"/><path d="M38 20V146M131 20V146M224 20V146M317 20V146M410 20V146"/></g><path id="chart-area" class="chart-area" d="M38 24 L84 38 L130 52 L176 66 L222 80 L268 94 L314 108 L360 122 L410 136 L410 146 L38 146Z"/><polyline id="chart-line" class="chart-line" points="38,24 84,38 130,52 176,66 222,80 268,94 314,108 360,122 410,136"/><circle id="chart-end" class="chart-end" cx="410" cy="136" r="4"/><g class="chart-labels"><text x="38" y="170">اکنون</text><text x="410" y="170">نقطه‌ی سر به سر</text></g></svg><div class="chart-foot"><span><i></i> نقدینگی تخمینی</span><span>بدون درنظرگرفتن درآمد آینده</span></div></div>
+          </div>
+          <div class="runway-disclaimer">این محاسبه ساده‌سازی‌شده است و مشاوره‌ی مالی محسوب نمی‌شود.</div>
+        </article>
+        <article class="tool-mini"><span class="mini-number">02</span><span class="mini-icon">↗</span><h3>ارزش‌گذاری</h3><p>بازه‌ی ارزش با چند روش رایج</p><span class="mini-status">به‌زودی</span></article>
+        <article class="tool-mini"><span class="mini-number">03</span><span class="mini-icon">◌</span><h3>رقیق‌شدن سهام</h3><p>سهم هر ذی‌نفع در دور بعد</p><span class="mini-status">به‌زودی</span></article>
+        <article class="tool-mini"><span class="mini-number">04</span><span class="mini-icon">◫</span><h3>Cap Table</h3><p>نمایش ساده‌ی جدول مالکیت</p><span class="mini-status">به‌زودی</span></article>
+        <article class="tool-mini"><span class="mini-number">05</span><span class="mini-icon">◎</span><h3>CAC و LTV</h3><p>هزینه و ارزش هر مشتری</p><span class="mini-status">به‌زودی</span></article>
+        <article class="tool-mini"><span class="mini-number">06</span><span class="mini-icon">⌁</span><h3>شاخص‌های SaaS</h3><p>از MRR تا قانون ۴۰</p><span class="mini-status">به‌زودی</span></article>
+        <article class="tool-mini"><span class="mini-number">07</span><span class="mini-icon">✳</span><h3>بلوغ استارتاپ</h3><p>سنجش تیم، محصول و بازار</p><span class="mini-status">به‌زودی</span></article>
+        <article class="tool-mini tool-mini-cta"><span class="mini-icon">↙</span><h3>یک عدد، یک تصمیم</h3><p>از ابزارها برای سؤال‌های بهتر استفاده کنید؛ نه پیش‌بینی قطعی آینده.</p><a href="#application-note">سؤال‌تان را با ما مطرح کنید <b>↙</b></a></article>
+      </div>
+    </section>
+
+    <section class="about-section scene-dark" id="about" data-scene="هم‌مسیر">
+      <div class="about-ambient" aria-hidden="true"></div>
+      <div class="about-layout shell">
+        <div class="about-copy">
+          <div class="section-kicker light-kicker"><span class="kicker-number">09</span><span>درباره‌ی x</span><i></i><span class="eyebrow-en">PARTNERS IN POSSIBILITY</span></div>
+          <h2>ما روی ایده‌ها<br>سرمایه نمی‌گذاریم؛<br><em>روی امکانِ ساختن.</em></h2>
+          <p>«x» نام موقت این تجربه است؛ یک هویت تصویری برای شرکتی که می‌خواهد کنار بنیان‌گذاران، از جرقه‌ی نخست تا شکل‌گرفتن یک صنعت بایستد.</p>
+          <div class="about-facts"><div><strong>01</strong><span>کنجکاوی پیش از قطعیت</span></div><div><strong>02</strong><span>شفافیت در هر گفت‌وگو</span></div><div><strong>03</strong><span>همراهی در روزهای واقعی ساختن</span></div></div>
+        </div>
+        <div class="about-visual" role="img" aria-label="نماد شبکه‌ی همراهی x"><div class="about-visual-grid"></div><div class="about-core"><img src="assets/logo.svg" alt="نشان x" width="126" height="126"></div><span class="about-node node-a">سرمایه</span><span class="about-node node-b">شبکه</span><span class="about-node node-c">بازار</span><span class="about-node node-d">رشد</span><svg viewBox="0 0 600 600" aria-hidden="true"><circle cx="300" cy="300" r="205"/><circle cx="300" cy="300" r="137"/><path d="M300 95v410M95 300h410M155 155l290 290m0-290L155 445"/></svg></div>
+      </div>
+      <div class="about-bottom shell"><span>نام، اطلاعات تماس و جزئیات واقعی شرکت پیش از انتشار قابل جایگزینی‌اند.</span><a class="text-link" href="#insights">یادداشت‌های ما <b>↙</b></a></div>
+    </section>
+
+    <section class="insights-section light-section" id="insights" data-scene="اندیشه">
+      <div class="section-heading shell">
+        <div class="section-kicker"><span class="kicker-number">10</span><span>یادداشت‌هایی برای ساختن</span><i></i><span class="eyebrow-en">FIELD NOTES</span></div>
+        <div class="heading-row"><h2>فکر کردن،<br><em>بخشی از ساختن است.</em></h2><p>چند یادداشت کوتاه برای شروع گفت‌وگو. این بخش برای مقالات واقعی آماده شده است.</p></div>
+      </div>
+      <div class="insights-grid shell">
+        <a class="insight-card insight-feature" href="#application-note"><span class="insight-label">01 / FOUNDER NOTES</span><span class="insight-art"><i class="insight-sun"></i><b>از ایده<br>تا مسئله</b></span><div class="insight-info"><span>راهنمای بنیان‌گذار <i>·</i> ۵ دقیقه مطالعه</span><h3>پیش از ساختن محصول، مطمئن شوید مسئله ارزش حل‌کردن دارد.</h3><b class="insight-arrow">↙</b></div></a>
+        <a class="insight-card" href="#tools"><span class="insight-label">02 / FINANCE</span><span class="insight-art insight-art-two"><i class="insight-bars"></i><b>Runway<br>واقع‌بینانه</b></span><div class="insight-info"><span>مدیریت مالی <i>·</i> ۴ دقیقه مطالعه</span><h3>چطور زمان باقی‌مانده‌ی نقدینگی را درست‌تر بخوانیم؟</h3><b class="insight-arrow">↙</b></div></a>
+        <a class="insight-card" href="#approach"><span class="insight-label">03 / FUNDRAISING</span><span class="insight-art insight-art-three"><i class="insight-path"></i><b>جلسه‌ی اول<br>سرمایه‌گذاری</b></span><div class="insight-info"><span>جذب سرمایه <i>·</i> ۶ دقیقه مطالعه</span><h3>برای گفت‌وگوی اول، چه چیزهایی را آماده کنیم؟</h3><b class="insight-arrow">↙</b></div></a>
+      </div>
+      <div class="insight-disclaimer shell">عنوان‌ها و کارت‌ها برای نمایش ساختار تحریریه‌اند؛ مقاله‌ی کامل در این نسخه ارائه نشده است.</div>
+    </section>
+
+    <section class="network-section light-section" id="network" data-scene="اکوسیستم">
+      <div class="network-inner shell">
+        <div class="network-title"><div class="section-kicker"><span class="kicker-number">11</span><span>اکوسیستم نوآوری</span><i></i><span class="eyebrow-en">BETTER TOGETHER</span></div><h2>هیچ آینده‌ای<br><em>تنها ساخته نمی‌شود.</em></h2><p>شبکه‌ی همکاری می‌تواند از تجربه، زیرساخت، دانش و بازار شکل بگیرد؛ رابطه‌های واقعی در نسخه‌ی نهایی معرفی می‌شوند.</p></div>
+        <div class="network-orbit" role="img" aria-label="دسته‌های همکار بالقوه"><div class="network-orbit-center"><img src="assets/logo.svg" alt="نشان x" width="64" height="64"><span>شبکه‌ی همراهی</span></div><div class="network-chip chip-1"><span>01</span>صندوق نوآوری</div><div class="network-chip chip-2"><span>02</span>پارک‌های علم‌وفناوری</div><div class="network-chip chip-3"><span>03</span>شتاب‌دهنده‌ها</div><div class="network-chip chip-4"><span>04</span>کارخانه‌های نوآوری</div><div class="network-chip chip-5"><span>05</span>مراکز رشد</div><div class="network-chip chip-6"><span>06</span>دانشگاه‌ها</div><svg viewBox="0 0 600 520" aria-hidden="true"><ellipse cx="300" cy="260" rx="232" ry="176"/><ellipse cx="300" cy="260" rx="155" ry="117"/><path d="M68 260h464M300 84v352M105 142l390 236m0-236L105 378"/></svg></div>
+      </div>
+      <div class="network-foot shell"><span>لوگوها و نام همکاران فقط با تأیید رسمی اضافه خواهند شد.</span><span class="eyebrow-en">A NETWORK BUILT ON TRUST</span></div>
+    </section>
+
+    <section class="final-section scene-dark" id="final" data-scene="سپیده‌دم بعدی">
+      <div class="final-glow" aria-hidden="true"></div><div class="final-stars" aria-hidden="true"></div>
+      <div class="final-crystal" aria-hidden="true"><div class="final-crystal-core"></div><i></i><b></b></div>
+      <div class="final-content shell" id="application-note">
+        <div class="section-kicker light-kicker"><span class="kicker-number">12</span><span>فصل بعدی را شما می‌سازید</span><i></i><span class="eyebrow-en">YOUR IDEA, NEXT</span></div>
+        <span class="final-eyebrow">هر صنعت، یک روز فقط یک ایده بود.</span>
+        <h2>ایده‌ات را<br><em>بفرست.</em></h2>
+        <p>اگر مسئله‌ای واقعی برای حل‌کردن دارید، اولین گفت‌وگو می‌تواند همین‌جا شروع شود.</p>
+        <button class="button final-cta magnetic" type="button" data-open-application><span class="button-shine"></span><span>شروع درخواست</span><b>↗</b></button>
+        <span class="final-small-note">حدود ۱۰ دقیقه · پیش‌نویس روی دستگاه شما ذخیره می‌شود</span>
+        <div class="final-coordinate">A GOOD IDEA IS A BEGINNING<br>04:10 → 06:40</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer" data-scene="پایان شب">
+    <div class="footer-top shell"><a class="brand footer-brand" href="#home"><img src="assets/logo.svg" alt="" width="50" height="50"><span class="brand-copy"><strong>x</strong><small>سرمایه‌گذاری جسورانه</small></span></a><span class="footer-status"><i></i> پذیرش درخواست‌ها باز است</span><a class="back-to-top" href="#home">بازگشت به آغاز <b>↑</b></a></div>
+    <div class="footer-wordmark shell">x<span>CAPITAL</span></div>
+    <div class="footer-grid shell">
+      <div class="footer-col"><span class="footer-heading">کاوش</span><a href="#approach">رویکرد ما</a><a href="#portfolio">پورتفولیو</a><a href="#tools">ابزارها</a></div>
+      <div class="footer-col"><span class="footer-heading">درباره‌ی x</span><a href="#about">داستان ما</a><a href="#network">اکوسیستم همکاران</a><a href="#insights">یادداشت‌ها</a></div>
+      <div class="footer-col"><span class="footer-heading">ارتباط</span><a href="mailto:hello@x.example">hello@x.example</a><a href="#application-note">تهران، ایران</a><span>شماره‌ی تماس: پس از نهایی‌شدن درج شود</span></div>
+      <div class="footer-col footer-note"><span class="footer-heading">یادداشت انتشار</span><p>نام x، آمار، پورتفولیو و اطلاعات تماس در این نسخه نمایشی هستند و پیش از انتشار رسمی باید با اطلاعات تأییدشده جایگزین شوند.</p></div>
+    </div>
+    <div class="footer-bottom shell"><span>© ۲۰۲۶ x سرمایه‌گذاری — همه‌ی حقوق محفوظ است.</span><span>ساخته‌شده برای ایده‌هایی که هنوز کسی ندیده است.</span><span class="footer-legal">حریم خصوصی <i>·</i> قوانین استفاده</span></div>
+  </footer>
+
+  <div class="mobile-apply-bar" id="mobile-apply-bar"><button class="button button-primary" type="button" data-open-application>ارسال درخواست <span class="arrow">↗</span></button></div>
+
+  <dialog class="application-dialog" id="apply-dialog" aria-labelledby="apply-title">
+    <div class="dialog-shell">
+      <div class="dialog-top"><a class="brand" href="#home"><img src="assets/logo.svg" alt="" width="42" height="42"><span class="brand-copy"><strong>x</strong><small>درخواست سرمایه‌گذاری</small></span></a><button class="dialog-close" id="dialog-close" type="button" aria-label="بستن فرم">×</button></div>
+      <div class="dialog-intro"><div><span class="eyebrow">START A CONVERSATION</span><h2 id="apply-title">ایده‌ات را با ما در میان بگذار.</h2><p>این فرم نسخه‌ی نمایشی است؛ اگر اجازه دهید، پیش‌نویس فقط در همین مرورگر ذخیره می‌شود و هیچ اطلاعاتی به سرور ارسال نمی‌شود.</p></div><div class="dialog-time"><strong>۱۰</strong><span>دقیقه</span><i>EST. TIME</i></div></div>
+      <div class="form-progress" aria-label="پیشرفت فرم"><div class="progress-track"><span id="form-progress-fill"></span></div><div class="form-progress-label"><span id="form-step-label">گام ۱ از ۳ · اطلاعات تماس</span><span id="form-progress-percent">۳۳٪</span></div></div>
+      <form id="application-form" novalidate>
+        <section class="application-step is-active" data-step="0" aria-label="اطلاعات تماس">
+          <div class="form-grid">
+            <label class="form-field field-wide"><span>نام و نام‌خانوادگی</span><input name="name" autocomplete="name" placeholder="مثلاً نیلوفر احمدی" required minlength="3"><small class="field-error"></small></label>
+            <label class="form-field"><span>شماره‌ی موبایل</span><input name="phone" inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲ ۱۲۳ ۴۵۶۷" required pattern="[0-9۰-۹+()\-\s]{10,16}"><small class="field-error"></small></label>
+            <label class="form-field"><span>ایمیل کاری</span><input name="email" type="email" autocomplete="email" placeholder="you@company.com" required><small class="field-error"></small></label>
+            <label class="form-field"><span>نقش شما در تیم</span><select name="role" required><option value="" disabled selected>انتخاب کنید</option><option>بنیان‌گذار / هم‌بنیان‌گذار</option><option>مدیرعامل</option><option>عضو تیم</option><option>سایر</option></select><small class="field-error"></small></label>
+            <label class="form-field"><span>شهر</span><input name="city" autocomplete="address-level2" placeholder="مثلاً تهران" required><small class="field-error"></small></label>
+          </div>
+        </section>
+        <section class="application-step" data-step="1" aria-label="ایده و محصول" hidden>
+          <div class="form-grid">
+            <label class="form-field"><span>نام شرکت یا ایده</span><input name="startup" placeholder="نام موقت هم قابل قبول است" required><small class="field-error"></small></label>
+            <label class="form-field"><span>مرحله‌ی فعلی</span><select name="stage" required><option value="" disabled selected>انتخاب کنید</option><option>ایده</option><option>نمونه‌ی اولیه (MVP)</option><option>درآمد اولیه</option><option>رشد</option></select><small class="field-error"></small></label>
+            <label class="form-field field-wide"><span>حوزه‌ی اصلی</span><select name="sector" required><option value="" disabled selected>انتخاب کنید</option><option>هوش مصنوعی</option><option>فین‌تک</option><option>سلامت و درمان</option><option>انرژی و محیط‌زیست</option><option>کشاورزی و غذا</option><option>صنعت و تولید</option><option>آموزش و منابع انسانی</option><option>تجارت و لجستیک</option></select><small class="field-error"></small></label>
+            <label class="form-field field-wide"><span>معرفی یک‌جمله‌ای</span><textarea name="summary" maxlength="140" rows="2" placeholder="چه مسئله‌ای را برای چه کسی حل می‌کنید؟" required></textarea><small class="field-hint"><span id="summary-count">۰</span> / ۱۴۰ نویسه</small><small class="field-error"></small></label>
+          </div>
+        </section>
+        <section class="application-step" data-step="2" aria-label="نیاز به سرمایه و تأیید" hidden>
+          <div class="form-grid">
+            <label class="form-field"><span>مبلغ موردنیاز تقریبی</span><select name="amount" required><option value="" disabled selected>انتخاب کنید</option><option>کمتر از ۵ میلیارد تومان</option><option>۵ تا ۲۰ میلیارد تومان</option><option>۲۰ تا ۵۰ میلیارد تومان</option><option>بیش از ۵۰ میلیارد تومان</option><option>هنوز در حال بررسی</option></select><small class="field-hint">بازه‌ها نمونه‌اند و باید با سیاست واقعی شرکت جایگزین شوند.</small><small class="field-error"></small></label>
+            <label class="form-field"><span>وب‌سایت یا لینک معرفی</span><input name="website" type="url" placeholder="https://" autocomplete="url"><small class="field-hint">اختیاری</small><small class="field-error"></small></label>
+            <label class="form-field field-wide"><span>سرمایه را برای چه چیزی نیاز دارید؟</span><textarea name="useOfFunds" rows="3" placeholder="برای مثال: توسعه‌ی محصول، جذب مشتری یا تکمیل تیم" required></textarea><small class="field-error"></small></label>
+            <label class="consent-field field-wide"><input name="consent" type="checkbox" required><span>با ذخیره‌ی پیش‌نویس این فرم در مرورگرم موافقم. می‌دانم که در نسخه‌ی نمایشی هیچ اطلاعاتی به سرور ارسال نمی‌شود.</span><small class="field-error"></small></label>
+          </div>
+        </section>
+        <div class="form-success" id="form-success" hidden><div class="success-crystal"><img src="assets/logo.svg" alt="" width="76" height="76"></div><span class="eyebrow">DRAFT SAVED LOCALLY</span><h3>پیش‌نویس شما آماده است.</h3><p>اطلاعات فرم فقط در همین دستگاه ذخیره شد. برای دریافت درخواست واقعی، این نمونه باید به API امن، سرویس OTP و فضای بارگذاری متصل شود.</p><button type="button" class="button button-primary" id="dialog-done">متوجه شدم <span class="arrow">✓</span></button></div>
+        <div class="form-actions" id="form-actions"><button type="button" class="form-back" id="form-back" disabled><span>→</span> قبلی</button><span class="form-auto-save"><i></i> ذخیره پس از تأیید شما</span><button type="button" class="button button-primary" id="form-next">ادامه <span class="arrow">↙</span></button></div>
+      </form>
+      <div class="dialog-foot"><span>نسخه‌ی نمایشی · فاقد اتصال به سرویس ارسال</span><a href="mailto:hello@x.example">نیاز به کمک دارید؟</a></div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
