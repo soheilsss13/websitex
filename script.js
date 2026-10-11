@@ -107,6 +107,70 @@
   });
   setScenePaused(scenePaused);
 
+  const fieldButtons = [...document.querySelectorAll('[data-field-index]')];
+  const focusVisual = document.getElementById('focus-visual');
+  const focusImage = document.getElementById('focus-image');
+  const focusCurrent = document.getElementById('focus-current');
+  const focusVisualEn = document.getElementById('focus-visual-en');
+  const focusVisualTitle = document.getElementById('focus-visual-title');
+  const focusVisualCopy = document.getElementById('focus-visual-copy');
+  const fields = [
+    { image: 'assets/images/sector-ai.jpg', en: 'INTELLIGENCE', title: 'هوش مصنوعی و داده', copy: 'ابزارها و مدل‌هایی که تصمیم‌گیری و تجربه‌ی محصول را معنادار بهتر می‌کنند.' },
+    { image: 'assets/images/sector-health.jpg', en: 'HEALTH', title: 'سلامت و زیست‌فناوری', copy: 'راه‌حل‌هایی برای دسترسی بهتر، تشخیص دقیق‌تر و کیفیت مراقبت.' },
+    { image: 'assets/images/sector-energy.jpg', en: 'CLIMATE', title: 'انرژی و اقلیم', copy: 'فناوری‌هایی برای بهره‌وری بیشتر و سازگاری هوشمندانه‌تر با اقلیم.' },
+    { image: 'assets/images/sector-fintech.jpg', en: 'FINANCIAL SYSTEMS', title: 'مالی و زیرساخت دیجیتال', copy: 'زیرساخت‌ها و خدماتی که اقتصاد دیجیتال را دسترس‌پذیرتر می‌کنند.' },
+    { image: 'assets/images/sector-education.jpg', en: 'LEARNING', title: 'آموزش و آینده‌ی کار', copy: 'راه‌های تازه برای یادگیری، مهارت‌آموزی و آماده‌شدن برای کار آینده.' },
+    { image: 'assets/images/sector-agriculture.jpg', en: 'FOOD SYSTEMS', title: 'کشاورزی و غذا', copy: 'نوآوری در زنجیره‌ی غذا؛ از تولید پایدار تا دسترسی کارآمدتر.' },
+    { image: 'assets/images/sector-logistics.jpg', en: 'MOVEMENT', title: 'لجستیک و زنجیره‌ی تأمین', copy: 'راه‌حل‌هایی برای جابه‌جایی، تجارت و زنجیره‌های تأمین تاب‌آور.' },
+    { image: 'assets/images/sector-manufacturing.jpg', en: 'INDUSTRY', title: 'صنعت و تولید پیشرفته', copy: 'نرم‌افزار، سخت‌افزار و فرایندهایی برای تولید هوشمندتر.' },
+  ];
+  let fieldSwap = 0;
+  let selectedField = -1;
+
+  function activateField(index) {
+    const field = fields[index];
+    if (!field || index === selectedField) return;
+    selectedField = index;
+    const ticket = ++fieldSwap;
+    fieldButtons.forEach((button) => {
+      const active = Number(button.dataset.fieldIndex) === index;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    if (focusVisual && !reduceMotion.matches) focusVisual.classList.add('is-changing');
+
+    const updateCaption = () => {
+      if (ticket !== fieldSwap) return;
+      if (focusCurrent) focusCurrent.textContent = String(index + 1).padStart(2, '0');
+      if (focusVisualEn) focusVisualEn.textContent = field.en;
+      if (focusVisualTitle) focusVisualTitle.textContent = field.title;
+      if (focusVisualCopy) focusVisualCopy.textContent = field.copy;
+    };
+    if (!focusImage) {
+      updateCaption();
+      return;
+    }
+    const preload = new Image();
+    preload.onload = () => {
+      if (ticket !== fieldSwap) return;
+      focusImage.src = field.image;
+      updateCaption();
+      requestAnimationFrame(() => focusVisual?.classList.remove('is-changing'));
+    };
+    preload.onerror = () => {
+      updateCaption();
+      focusVisual?.classList.remove('is-changing');
+    };
+    preload.src = field.image;
+  }
+
+  fieldButtons.forEach((button) => {
+    const index = Number(button.dataset.fieldIndex);
+    button.addEventListener('mouseenter', () => activateField(index));
+    button.addEventListener('focus', () => activateField(index));
+    button.addEventListener('click', () => activateField(index));
+  });
+
   const year = document.getElementById('current-year');
   if (year) year.textContent = String(new Date().getFullYear());
 
